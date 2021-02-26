@@ -143,32 +143,32 @@ labo04/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/labo04.dir/build.make CMakeFiles/labo04.dir/build
 .PHONY : labo04/fast
 
-ej15.o: ej15.cpp.o
+ejercicios.o: ejercicios.cpp.o
 
-.PHONY : ej15.o
+.PHONY : ejercicios.o
 
 # target to build an object file
-ej15.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/labo04.dir/build.make CMakeFiles/labo04.dir/ej15.cpp.o
-.PHONY : ej15.cpp.o
+ejercicios.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/labo04.dir/build.make CMakeFiles/labo04.dir/ejercicios.cpp.o
+.PHONY : ejercicios.cpp.o
 
-ej15.i: ej15.cpp.i
+ejercicios.i: ejercicios.cpp.i
 
-.PHONY : ej15.i
+.PHONY : ejercicios.i
 
 # target to preprocess a source file
-ej15.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/labo04.dir/build.make CMakeFiles/labo04.dir/ej15.cpp.i
-.PHONY : ej15.cpp.i
+ejercicios.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/labo04.dir/build.make CMakeFiles/labo04.dir/ejercicios.cpp.i
+.PHONY : ejercicios.cpp.i
 
-ej15.s: ej15.cpp.s
+ejercicios.s: ejercicios.cpp.s
 
-.PHONY : ej15.s
+.PHONY : ejercicios.s
 
 # target to generate assembly for a file
-ej15.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/labo04.dir/build.make CMakeFiles/labo04.dir/ej15.cpp.s
-.PHONY : ej15.cpp.s
+ejercicios.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/labo04.dir/build.make CMakeFiles/labo04.dir/ejercicios.cpp.s
+.PHONY : ejercicios.cpp.s
 
 # Help Target
 help:
@@ -179,9 +179,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... labo04"
-	@echo "... ej15.o"
-	@echo "... ej15.i"
-	@echo "... ej15.s"
+	@echo "... ejercicios.o"
+	@echo "... ejercicios.i"
+	@echo "... ejercicios.s"
 .PHONY : help
 
 

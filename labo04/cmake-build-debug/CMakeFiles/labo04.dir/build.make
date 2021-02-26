@@ -77,27 +77,27 @@ include CMakeFiles/labo04.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/labo04.dir/flags.make
 
-CMakeFiles/labo04.dir/ej15.cpp.o: CMakeFiles/labo04.dir/flags.make
-CMakeFiles/labo04.dir/ej15.cpp.o: ../ej15.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/CLionProjects/labo04/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/labo04.dir/ej15.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/labo04.dir/ej15.cpp.o -c /home/franco/CLionProjects/labo04/ej15.cpp
+CMakeFiles/labo04.dir/ejercicios.cpp.o: CMakeFiles/labo04.dir/flags.make
+CMakeFiles/labo04.dir/ejercicios.cpp.o: ../ejercicios.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/CLionProjects/labo04/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/labo04.dir/ejercicios.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/labo04.dir/ejercicios.cpp.o -c /home/franco/CLionProjects/labo04/ejercicios.cpp
 
-CMakeFiles/labo04.dir/ej15.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/labo04.dir/ej15.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/franco/CLionProjects/labo04/ej15.cpp > CMakeFiles/labo04.dir/ej15.cpp.i
+CMakeFiles/labo04.dir/ejercicios.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/labo04.dir/ejercicios.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/franco/CLionProjects/labo04/ejercicios.cpp > CMakeFiles/labo04.dir/ejercicios.cpp.i
 
-CMakeFiles/labo04.dir/ej15.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/labo04.dir/ej15.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/franco/CLionProjects/labo04/ej15.cpp -o CMakeFiles/labo04.dir/ej15.cpp.s
+CMakeFiles/labo04.dir/ejercicios.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/labo04.dir/ejercicios.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/franco/CLionProjects/labo04/ejercicios.cpp -o CMakeFiles/labo04.dir/ejercicios.cpp.s
 
 # Object files for target labo04
 labo04_OBJECTS = \
-"CMakeFiles/labo04.dir/ej15.cpp.o"
+"CMakeFiles/labo04.dir/ejercicios.cpp.o"
 
 # External object files for target labo04
 labo04_EXTERNAL_OBJECTS =
 
-labo04: CMakeFiles/labo04.dir/ej15.cpp.o
+labo04: CMakeFiles/labo04.dir/ejercicios.cpp.o
 labo04: CMakeFiles/labo04.dir/build.make
 labo04: CMakeFiles/labo04.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/franco/CLionProjects/labo04/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable labo04"

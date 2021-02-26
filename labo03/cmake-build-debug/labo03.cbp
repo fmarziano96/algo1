@@ -84,7 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/franco/CLionProjects/labo03/ej09.cpp">
+		<Unit filename="/home/franco/CLionProjects/labo03/ejercicios.cpp">
 			<Option target="labo03"/>
 		</Unit>
 		<Unit filename="/home/franco/CLionProjects/labo03/CMakeLists.txt">

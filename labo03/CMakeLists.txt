@@ -3,4 +3,4 @@ project(labo03)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(labo03 ej09.cpp)
+add_executable(labo03 ejercicios.cpp)

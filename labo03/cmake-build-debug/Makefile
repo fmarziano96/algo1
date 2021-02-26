@@ -59,10 +59,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/138/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/139/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/138/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/139/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /home/franco/CLionProjects/labo03/cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/138/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/139/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -90,7 +90,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/138/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/139/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -143,32 +143,32 @@ labo03/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/labo03.dir/build.make CMakeFiles/labo03.dir/build
 .PHONY : labo03/fast
 
-ej09.o: ej09.cpp.o
+ejercicios.o: ejercicios.cpp.o
 
-.PHONY : ej09.o
+.PHONY : ejercicios.o
 
 # target to build an object file
-ej09.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/labo03.dir/build.make CMakeFiles/labo03.dir/ej09.cpp.o
-.PHONY : ej09.cpp.o
+ejercicios.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/labo03.dir/build.make CMakeFiles/labo03.dir/ejercicios.cpp.o
+.PHONY : ejercicios.cpp.o
 
-ej09.i: ej09.cpp.i
+ejercicios.i: ejercicios.cpp.i
 
-.PHONY : ej09.i
+.PHONY : ejercicios.i
 
 # target to preprocess a source file
-ej09.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/labo03.dir/build.make CMakeFiles/labo03.dir/ej09.cpp.i
-.PHONY : ej09.cpp.i
+ejercicios.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/labo03.dir/build.make CMakeFiles/labo03.dir/ejercicios.cpp.i
+.PHONY : ejercicios.cpp.i
 
-ej09.s: ej09.cpp.s
+ejercicios.s: ejercicios.cpp.s
 
-.PHONY : ej09.s
+.PHONY : ejercicios.s
 
 # target to generate assembly for a file
-ej09.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/labo03.dir/build.make CMakeFiles/labo03.dir/ej09.cpp.s
-.PHONY : ej09.cpp.s
+ejercicios.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/labo03.dir/build.make CMakeFiles/labo03.dir/ejercicios.cpp.s
+.PHONY : ejercicios.cpp.s
 
 # Help Target
 help:
@@ -179,9 +179,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... labo03"
-	@echo "... ej09.o"
-	@echo "... ej09.i"
-	@echo "... ej09.s"
+	@echo "... ejercicios.o"
+	@echo "... ejercicios.i"
+	@echo "... ejercicios.s"
 .PHONY : help
 
 
