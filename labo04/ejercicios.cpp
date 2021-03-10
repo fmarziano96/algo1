@@ -144,9 +144,16 @@ vector<int> factoresPrimos(int n){
 }
 
 // 1.10)
+bool ordenCreciente(vector<int> v){
+    bool creciente = true;
+    for(int i = 0; i < v.size()-1; i++){
+        creciente = creciente && (v[i] <= v[i+1]);
+    }
+    return creciente;
+}
 bool estaOrdenado(vector<int> v){
-    bool b = false;
-    return b;
+    bool ordenado = ordenCreciente(v) || ordenCreciente(reverso(v));
+    return ordenado;
 }
 
 // 1.11)
@@ -313,5 +320,11 @@ int main (){
     std::cout << "Hello, World!" << std::endl;
     cantidadApariciones("apariciones.txt", "apariciones_out.txt");
     estadisticas("estadisticas.txt");
+    vector<int> v;
+    v.push_back(1);
+    v.push_back(2);
+    v.push_back(3);
+    v.push_back(4);
+    std::cout << estaOrdenado(v) << std::endl;
     return 0;
 }
