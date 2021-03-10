@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/franco/CLionProjects/labo05/ejercicios.cpp
+iostream
+-
+ejercicios.h
+/home/franco/CLionProjects/labo05/ejercicios.h
+math.h
+-
+
 /home/franco/CLionProjects/labo05/ejercicios.h
 vector
 -
@@ -13,10 +21,4 @@ string
 -
 iostream
 -
-
-/home/franco/CLionProjects/labo05/main.cpp
-iostream
--
-ejercicios.h
-/home/franco/CLionProjects/labo05/ejercicios.h
 

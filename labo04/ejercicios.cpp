@@ -3,7 +3,9 @@
 #include <fstream>
 using namespace std;
 
-// Ej 1.1
+// Ejercicio 1
+
+// 1.1)
 bool divide(vector<int> v, int n){
     int cantDivVector = 0;
     for(int i = 0; i < v.size(); i++){
@@ -14,7 +16,7 @@ bool divide(vector<int> v, int n){
     return cantDivVector == v.size();
 }
 
-// Ej 1.2
+// 1.2)
 int maximo(vector<int> v){
     int max = v[0];
     for(int i = 0; i < v.size(); i++){
@@ -25,7 +27,7 @@ int maximo(vector<int> v){
     return max;
 }
 
-// Ej 1.3
+// 1.3)
 bool pertenece(int elem, vector<int> v){
     bool pertenece = false;
     for(int i = 0; i < v.size(); i++){
@@ -36,7 +38,7 @@ bool pertenece(int elem, vector<int> v){
     return pertenece;
 }
 
-// Ej 1.4
+// 1.4)
 void mostrarVector(vector<int> v){
     std::cout << "[";
     for(int i = 0; i < v.size(); i++){
@@ -48,7 +50,7 @@ void mostrarVector(vector<int> v){
     }
 }
 
-// Ej 1.5
+// 1.5)
 vector<int> sinImpares(vector<int> &v){
     for(int i = 0; i < v.size(); i++){
         if(v[i] % 2 == 1){
@@ -58,7 +60,16 @@ vector<int> sinImpares(vector<int> &v){
     return v;
 }
 
-// Ej 1.6
+// 1.6)
+int cantidad_apariciones(int elem, vector<int> v){
+    int apariciones = 0;
+    for(int i = 0; i < v.size(); i++){
+        if(v[i] == elem){
+            apariciones += 1;
+        }
+    }
+    return apariciones;
+}
 vector<int> limpiarDuplicados(vector<int> v){
     vector<int> v1, s;
     for(int i = 0; i < v.size(); i++){
@@ -70,7 +81,7 @@ vector<int> limpiarDuplicados(vector<int> v){
     return s;
 }
 
-// Ej 1.7
+// 1.7)
 vector<int> rotar(vector<int> v, int k){
     vector<int> s;
     if(k > v.size()){
@@ -95,7 +106,7 @@ vector<int> rotar(vector<int> v, int k){
     return res;
 }*/
 
-// Ej 1.8
+// 1.8)
 vector<int> reverso(vector<int> v){
     vector<int> s;
     int size = v.size() - 1;
@@ -108,7 +119,7 @@ vector<int> reverso(vector<int> v){
     return s;
 }
 
-// Ej 1.9
+// 1.9)
 bool esPrimo(int n){
     int cant_divisores = 0;
     for(int i = 2; i < n; i++){
@@ -132,12 +143,13 @@ vector<int> factoresPrimos(int n){
     return v;
 }
 
-// Ej 1.10
+// 1.10)
 bool estaOrdenado(vector<int> v){
-    return v;
+    bool b = false;
+    return b;
 }
 
-// Ej 1.11
+// 1.11)
 void mostrarVectorBools(vector<bool> v){
     std::cout << "[";
     for(int i = 0; i < v.size(); i++){
@@ -155,7 +167,7 @@ vector<bool> negar(vector<bool> &v){
     return v;
 }
 
-// Ej 1.12
+// 1.12)
 void mostrarVectorTuplas(vector<pair<int, int>> v){
     std::cout << "[";
     for(int i = 0; i < v.size(); i++){
@@ -165,16 +177,6 @@ void mostrarVectorTuplas(vector<pair<int, int>> v){
             std::cout << "<" << v[i].first << ", " << v[i].second << ">" << "]" << std::endl;
         }
     }
-}
-
-int cantidad_apariciones(int elem, vector<int> v){
-    int apariciones = 0;
-    for(int i = 0; i < v.size(); i++){
-        if(v[i] == elem){
-            apariciones += 1;
-        }
-    }
-    return apariciones;
 }
 
 vector<pair<int, int>> apariciones(vector<int> v){
@@ -189,7 +191,9 @@ vector<pair<int, int>> apariciones(vector<int> v){
     return s;
 }
 
-// Ej 1.13
+// Ejercicio 2
+
+// 2.1)
 bool esPalindromo(string p1){
     int contadorLetras = 0;
     for(int i = 0; i < p1.length()/2; i++){
@@ -221,7 +225,7 @@ void palindromos(string rutaArchivoIn, string rutaArchivoOut){
     fout.close();
 }
 
-// Ej 1.14
+// 2.2)
 void promedios(string rutaArchivoIn1, string rutaArchivoIn2, string rutaArchivoOut){
     ifstream fin1;
     fin1.open(rutaArchivoIn1);
@@ -242,7 +246,72 @@ void promedios(string rutaArchivoIn1, string rutaArchivoIn2, string rutaArchivoO
     fout.close();
 }
 
+// 2.3
+vector<int> fileToArray(string rutaArchivoIn){
+    ifstream fin;
+    fin.open(rutaArchivoIn);
+    vector<int> v;
+    while(!fin.eof()){
+        int n;
+        fin >> n;
+        v.push_back(n);
+    }
+    return v;
+}
+int cantApariciones(vector<int> v, int elem){
+    int apariciones = 0;
+    for(int i = 0; i < v.size(); i++){
+        if(v[i] == elem){
+            apariciones++;
+        }
+    }
+    return apariciones;
+}
+void cantidadApariciones(string rutaArchivoIn, string rutaArchivoOut){
+    ifstream fin;
+    fin.open(rutaArchivoIn);
+    ofstream fout;
+    fout.open(rutaArchivoOut);
+    vector<int> lista = fileToArray(rutaArchivoIn);
+    vector<int> sin_repe = limpiarDuplicados(lista);
+    for(int j = 0; j < sin_repe.size(); j++){
+        fout << sin_repe[j] << " " << cantApariciones(lista, sin_repe[j]) << endl;
+    }
+    fout.close();
+    fin.close();
+}
+
+// 2.4
+void estadisticas(string rutaArchivo){
+    ifstream fin;
+    fin.open(rutaArchivo);
+    vector<int> largo_palabras;
+    while(!fin.eof()){
+        string pal;
+        fin >> pal;
+        int largo_pal = pal.length();
+        int largo = largo_palabras.size();
+        if(largo_pal <= largo){
+            largo_palabras[largo_pal-1] += 1;
+        } else {
+            int dif = largo_pal - largo;
+            for(int i = 0; i < dif; i++){
+                largo_palabras.push_back(0);
+            }
+            largo_palabras[largo_pal-1] += 1;
+        }
+    }
+    int j = 0;
+    while(j < largo_palabras.size()){
+        std::cout << "Palabras de longitud " << j+1 << ": " << largo_palabras[j] << std::endl;
+        j++;
+    }
+}
+
 int main (){
+
     std::cout << "Hello, World!" << std::endl;
+    cantidadApariciones("apariciones.txt", "apariciones_out.txt");
+    estadisticas("estadisticas.txt");
     return 0;
 }

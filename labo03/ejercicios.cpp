@@ -139,8 +139,8 @@ int main () {
 
     escribirArchivo(2, 5, 2.5, 1.5);
 
-    int n1 = 10;
-    prueba(n1, n1);
+    int x = 10;
+    prueba(x, x);
 
     int a;
     int b;

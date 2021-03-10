@@ -8,7 +8,7 @@ using namespace std;
 bool estaOrdenadoAsc(vector<int> v){
     int i=0;
     int longitud = v.size();
-    bool esMenor;
+    bool esMenor = true;
     while(i<=longitud-2 && esMenor){
         esMenor = v[i] <= v[i+1];
         i++;
@@ -19,7 +19,7 @@ bool estaOrdenadoAsc(vector<int> v){
 bool estaOrdenadoDesc(vector<int> v){
     int longitud = v.size();
     int i=0;
-    bool esMayor;
+    bool esMayor = true;
     while(i<=longitud-2 && esMayor){
         esMayor = v[i] >= v[i+1];
         i++;
@@ -178,7 +178,16 @@ int sumatoria2(vector<int> v){
 /************* Ejercicio 10 *************/
 
 void ordenar(vector<int>& v){
-    //Implementar
+    int i = 0;
+    int pos;
+    while(i < v.size()){
+        pos = indiceMinimoSubsec(v, i, v.size()-1);
+        int v_i = v[i];
+        int min = v[pos];
+        v[i] = min;
+        v[pos] = v_i;
+        i++;
+    }
 }
 
 
